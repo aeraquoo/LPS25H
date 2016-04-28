@@ -291,10 +291,10 @@ class LPS25H {
             }
         } catch (err) {
             if (cb == null) {
-                return {"error": err, "pressure": null};
+                return {"err": err, "pressure": null};
             } else {
                 imp.wakeup(0, function() {
-                    cb({"error": err, "pressure": null})
+                    cb({"err": err, "pressure": null})
                 });
             }
         }
